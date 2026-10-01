@@ -2,10 +2,10 @@
 
 ## Miembros del grupo LX-XXX-X (sustituir)
 
-1. Apellidos, Nombre
-1. Apellidos, Nombre
-1. Apellidos, Nombre
-1. Apellidos, Nombre
+1. GIMENA SALAS,RODRIGO
+1. LADEBAUCHE RICCA, JAMES MICHAEL
+1. SORIANO RODRIGUEZ, MIGUEL
+1. ALMERO RUIZ, FRANCISCO DE ASÍS
 
 ## 1. Introducción al problema
 
