@@ -85,25 +85,72 @@ Desde el punto de vista técnico, la base de datos deberá disponer de una estru
 
 ### 4.1. Requisitos funcionales
 
-#### R.F.01. Título requisito funcional
+#### R.F.01. Registrar varias cuentas por usuario
 
-Como [tipo de usuario]
-quiero [servicio]
-para [razón]
+Como cliente,
+quiero poder acceder a distintas cuentas bancarias
+para poder entrar en ellas en una sola aplicación.
 
 **Prueba de aceptación**
-- Descripción de la primera comprobación a realizar
-- Descripción de la segunda comprobación a realizar
-- Se debe aplicar la regla de negocio R.N.XX.
-- ...
+- Dado un usuario, cuando este añade una cuenta bancaria, se añadirá a su lista de cuentas.
+- R.N.01: Las cuentas bancarias a añadir en el usuario deben de tener el mismo id de usuario.
+
+#### R.F.02. Consulta de Saldos
+
+Como cliente,
+quiero poder consultar mi saldo
+para poder ver los ingresos/gastos y planificar mi dinero.
+
+**Prueba de aceptación**
+- Dado un saldo, si este es de 1000$ y le llega un gasto de 500$ y un ingreso de 300$, el saldo debe de mostrar un total de 800$.
+- Dado un saldo de 1500$, si se trata de realizar un gasto de 2000$, este se rechazará por saldo insuficiente.
+- R.N.02: Los ingresos han de ser siempre positivo.
+- R.N.03: El saldo no puede ser menor que 0.
+- R.N.04: Los gastos han de ser menores que el saldo.
+
+#### R.F.03. Transferencias
+
+Como cliente,
+quiero poder realizar transferencias
+para poder mover mis saldo a otras cuentas , recibir y dar dinero a otras cuentas.
+
+**Prueba de aceptación**
+- Dado dos cuentas A = 500$ y B = 1000$, si se realiza una transferencia de A a B de 200$, las cuentas quedarían con saldos de A = 300$ y B = 1200$.
+- Dado dos cuentas A = 500$ y B = 1000$, si se trata de realizar una transferencia de A a B de 700$, este se rechazará por superar el saldo de A, quien emite la transferencia.
+- R.N.05: Los importes a transferir no pueden superar al saldo de la cuenta emisora.
+- R.N.06: Los importes a transferir no pueden ser negativos.
+
+#### R.F.04. Clasificación
+
+Como cliente,
+quiero que mis movimientos estén clasificados según su tipo y categoría (Ocio,Transporte,etc)
+para que la búsqueda de saldos sea más fácil y estos estén ordenados.
+
+**Prueba de aceptación**
+- Dado un gasto, si este viene con la categoría de "Ocio", este ha de ser guardado bajo la categoría de "Ocio"
+- Dado un gasto, si este no viene dado por un tipo, se considerará como "Otro" y se guardará en dicha sección
+- Dado un movimiento, si este no viene dado por ningún tipo, se considerará no valido y no cambiará el saldo.
+- R.N.07: Los movimientos han de tener un tipo establecido (Gasto o Ingreso)
+- R.N.06: Los gastos han de estar guardados en una categoría.
+
+#### R.F.05. Presupuesto
+
+Como cliente,
+quiero poder crear y consultar presupuestos
+para poder planificar mis movimientos con mayor detenimiento.
+
+**Prueba de aceptación**
+- Dado un presupuesto de unos 300$ para marzo bajo la categoria de "Vivienda", si se crea otro en el mismo mes y categoría, se rechazará.
+- Dado un presupuesto de unos 1000$ para marzo, si hago gastos de 150$ y 200$ en dicho mes, el gasto real será de unos 350$ y solo se podrá gastar 650$.
+- Dado un presupuesto en la categoría "Ocio" para abril, si se crea otro presupuesto de la misma categoría pero de distinto mes, se rechazará dicha creación.
+- R.N.08: Un presupuesto ha de estar ligado a un único usuario, categoría y mes.
+- R.N.09: El gasto real ha de ser la suma de todos los gastos de una categoría realizada en un mes.
+- R.N.10: Las transferencias a cuentas del mismo usuario no cuentan en el gasto real.
+  
 
 #### 4.1.1. Requisitos de información
 
-##### R.I.01. Título requisito de información
-
-Como [tipo de usuario]
-quiero [servicio]
-para [razón]
+##### R.I.01.
 
 **Prueba de aceptación**
 - Descripción de la primera comprobación a realizar
