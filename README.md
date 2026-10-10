@@ -143,9 +143,11 @@ para poder planificar mis movimientos con mayor detenimiento.
 - Dado un presupuesto de unos 300$ para marzo bajo la categoria de "Vivienda", si se crea otro en el mismo mes y categoría, se rechazará.
 - Dado un presupuesto de unos 1000$ para marzo, si hago gastos de 150$ y 200$ en dicho mes, el gasto real será de unos 350$ y solo se podrá gastar 650$.
 - Dado un presupuesto en la categoría "Ocio" para abril, si se crea otro presupuesto de la misma categoría pero de distinto mes, se rechazará dicha creación.
+- Dado una categoria de ingresos (Nómina), si el usuario trata de crear un presupuesto en dicha categoria, se rechazará dicha creación.
 - R.N.08: Un presupuesto ha de estar ligado a un único usuario, categoría y mes.
 - R.N.09: El gasto real ha de ser la suma de todos los gastos de una categoría realizada en un mes.
 - R.N.10: Las transferencias a cuentas del mismo usuario no cuentan en el gasto real.
+- R.N.11: Solo se pueden presupuestar categorias de gasto.
   
 
 #### 4.1.1. Requisitos de información
