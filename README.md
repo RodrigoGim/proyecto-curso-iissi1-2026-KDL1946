@@ -152,28 +152,78 @@ para poder planificar mis movimientos con mayor detenimiento.
 
 #### 4.1.1. Requisitos de información
 
-##### R.I.01.
+##### R.I.01. Usuario:
+
+Como cliente, 
+quiero poder registrarme en la plataforma con nombre,
+email y fecha de alta.
 
 **Prueba de aceptación**
-- Descripción de la primera comprobación a realizar
-- Descripción de la segunda comprobación a realizar
-- ...
+- Dado un cliente, si se crea una usuario con los datos requeridos, su guardará todos sus datos.
+- Dado un cliente, si este crea una nueva usuario con mismo email de otra cuenta, se rechaza.
+- Dado un cliente, si al crear una usuario, no se proporciona email, nombre o fecha de alta, se rechaza por falta de datos.
 
-#### 4.1.2. Reglas de negocio
+##### R.I.02. Cuentas:
 
-##### R.N.01. Título regla negocio
+Como cliente,
+quiero crear cuentas en mi usuario
+para poder gestionarlas todas en una sola aplicación. Dicha cuenta ha de estar definida por su usuario,
+nombre, tipo de cuenta, saldo y si esta activa.
 
-Descripción de la regla de negocio.
+**Prueba de aceptación**
+- Dado un usuario, si se crea una cuenta con los datos requeridos mas su saldo (supóngase 1000$), su guardará todos sus datos y su saldo inicial.
+- Dado un usuario, si se crea una cuenta sin definir la moneda que emplea, se pondrá como defecto el EURO.
+- Dado un usuario cuyo id no existe. si trata de crearla, se rechazará.
+- Dado un usuario, si se crea una cuenta con saldo negativo, se rechazará.
 
-### 4.2. Mapa de historias de usuario (opcional)
+##### R.I.03. Movimientos:
 
-### 4.3. Requisitos no funcionales (opcional)
+Como cliente,
+quiero poder consultar los movimientos
+realizados, quiero en ellas se indiquen su cuenta asociada, categoría, fecha, importe, descripcion, tipo de movimiento (ingreso o gasto) y fecha de creación.
 
-**R.N.F. 01. Título requisito no funcional**
-Como [tipo de usuario]
-quiero [servicio]
-para [razón]
+**Prueba de aceptación**
+- Dado un movimiento, si este no se indica que tipo de movimiento es, se considerará como inexistente.
+- Dado un movimiento, si esta no esta asociada a la cuenta en el que se realizo dicho movimiento, se considerará igualmente inexistente.
+- Dado un movimiento, si este posee importe negativo (independientemente si es gasto o ingreso), se considerará no válido.
+- Dado un movimiento, si este posee un tipo, cuenta asociada, importe y fecha de creación, se registrará en la base de datos.
 
+##### R.I.04. Categorias:
+
+Como administrador,
+quiero poder crear categorias
+para poder ordenar los movimientos de manera mas sencilla y estructurada.
+Es importante que esta esté definida por su nombre y tipo.
+
+**Prueba de aceptación**
+- Como administrador, si creo una cuenta titulada "Vivienda", se crea y se guarda en la base de datos.
+- Como administrador, si creo una cuenta titulada "Ocio" y ya existe, se rechaza.
+- Como administrador, si creo una cuenta de un tipo que no sea ni ingreso ni gasto, se rechaza.
+- Como usuario, si trato de crear una categoría, se rechaza al no tener dichos privilegios.
+
+##### R.I.05. Transferencias:
+
+Como cliente,
+quiero que las transferencias estén definidas por su cuenta de origen, cuenta destino, importe, el tipo y su descripción.
+
+**Prueba de aceptación**
+- Como usuario, si hago una transferencia a otra cuenta con un importe negativo, independientemente del tipo, se rechaza.
+- Como usuario, si hago una transferencia sin indicar el tipo, se rechaza.
+- Como usuario, si hago una transferencia sin ninguna descripción, se tomara como NULO y se considerara válida la transferencia.
+- Como usuario, si hago una transferencia a una cuenta que no existe, o no lo indico, se rechaza.
+
+##### R.I.06. Presupuesto:
+
+Como cliente,
+quiero que los presupuestos tengan su usuario asociado, la categoría asociada, el importe que se desea presupuestar, su mes y año, y si esta activo
+
+**Prueba de aceptación**
+- Como usuario, si hago un presupuesto para la categoría "Comida" y ya existe tal presupuesto, se rechaza.
+- Como usuario, si creo un presupuesto para una categoría de ingresos, se rechaza.
+- Como usuario, si el presupuesto no esta asociada a ningún usuario, no existe.
+- Como usuario, si el importe a presupuestar es negativo, se rechazará su creacion.
+
+#### 4.1.2. Reglas de negocio (En requisitos funcionales)
 -- fin entregable 1 --
 
 ## 5. Modelo conceptual
