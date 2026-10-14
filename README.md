@@ -114,7 +114,7 @@ Desde el punto de vista técnico, la base de datos deberá disponer de una estru
 #### R.G.03. Mover dinero entre cuentas
   Como cliente, quiero registrar las transferencias entre mis cuentas y con otros usuarios, para que los saldos de todas mis cuentas estén siempre actualizados.
 
-#### RG..04. Planificar con presupuestos
+#### RG.04. Planificar con presupuestos
   Como cliente, quiero fijar un límite de gasto mensual por categoría, para no gastar más de lo que tenía previsto.
 
 #### R.G.05. Analizar la situación económica
