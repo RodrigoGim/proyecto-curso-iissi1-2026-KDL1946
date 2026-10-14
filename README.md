@@ -8,8 +8,6 @@
 
 ## 1. Introducción al problema
 
-- Descripción del problema para poner en contexto el proyecto, incluyendo información sobre los clientes y usuarios, la situación actual, problemas, expectativas, etc. Se valorará la presencia de información multimedia (fotos, gráficos, documentos escaneados, etc.).
-
 ### Contexto y descripción general
 
 En la actualidad, la gestión de las finanzas personales constituye una actividad importante para personas de diferentes edades y situaciones económicas. Todo tipo de personas necesitan controlar sus ingresos, gastos, ahorros y presupuestos para conocer su situación económica y tomar decisiones financieras adecuadas.
@@ -73,8 +71,6 @@ Desde el punto de vista técnico, la base de datos deberá disponer de una estru
 
 ## 2. Glosario de términos
 
-Términos específicos del dominio del problema, ordenados alfabéticamente. Se valorará la presencia de información multimedia.
-
 - Administrador: persona encargada del mantenimiento técnico del sistema. Gestiona las categorías generales y los usuarios, pero no consulta los datos económicos de nadie.
   
 - Ahorro: diferencia entre los ingresos y los gastos de un usuario en un periodo (normalmente un mes). Si sale negativo, ese mes se ha gastado más de lo que se ha ingresado.
@@ -109,22 +105,22 @@ Términos específicos del dominio del problema, ordenados alfabéticamente. Se 
 
 ### 3.1. Requisitos generales
 
-#### RG-01. Gestionar las cuentas
+#### R.G.01. Gestionar las cuentas
   Como cliente, quiero tener todas mis cuentas (bancarias, tarjetas y efectivo) en una misma aplicación, para saber en todo momento cuánto dinero tengo y dónde.
 
-#### RG-02. Controlar los ingresos y gastos
+#### R.G.02. Controlar los ingresos y gastos
   Como cliente, quiero registrar mis ingresos y gastos clasificados por categorías, para saber en qué me gasto el dinero.
 
-#### RG-03. Mover dinero entre cuentas
+#### R.G.03. Mover dinero entre cuentas
   Como cliente, quiero registrar las transferencias entre mis cuentas y con otros usuarios, para que los saldos de todas mis cuentas estén siempre actualizados.
 
-#### RG-04. Planificar con presupuestos
+#### RG..04. Planificar con presupuestos
   Como cliente, quiero fijar un límite de gasto mensual por categoría, para no gastar más de lo que tenía previsto.
 
-#### RG-05. Analizar la situación económica
+#### R.G.05. Analizar la situación económica
   Como cliente, quiero consultar resúmenes de mis ingresos, gastos y ahorro por meses, para ver cómo evolucionan mis finanzas y tomar mejores decisiones.
 
-#### RG-06. Mantener el sistema
+#### R.G.06. Mantener el sistema
   Como administrador, quiero gestionar los usuarios y las categorías generales, para que la aplicación funcione correctamente y sea igual para todos.
 
 ### 3.2. Usuarios del sistema
@@ -396,8 +392,8 @@ En el mapa se organizan las historias de usuario debajo del requisito general al
 
 | R.G.01. Gestionar las cuentas | R.G.02. Controlar ingresos y gastos | R.G.03. Mover dinero entre cuentas | R.G.04. Planificar con presupuestos | R.G.05. Analizar la situación económica | R.G.06. Mantener el sistema |
 |:---|:---|:---|:---|:---|:---|
-| R.I.02. Información sobre las cuentas | R.I.04. Información sobre los movimientos | R.I.05. Información sobre las transferencias | R.I.06. Información sobre los presupuestos | R.F.03. Resumen mensual | R.I.01. Información sobre los usuarios |
-| R.F.01. Listado de cuentas y saldo total | R.I.03. Información sobre las categorías | R.F.07. Historial de transferencias | R.F.05. Seguimiento de presupuestos | R.F.04. Gasto por categorías | R.F.09. Listado de usuarios |
+| R.I.02. Cuentas | R.I.03. Movimientos | R.I.05. Transferencias | R.I.06. Presupuestos | R.F.03. Resumen mensual | R.I.01. Usuario |
+| R.F.01. Listado de cuentas y saldo total | R.I.04. Categorías | R.F.07. Historial de transferencias | R.F.05. Seguimiento de presupuestos | R.F.04. Gasto por categorías | R.F.09. Listado de usuarios |
 |  | R.F.02. Consulta de movimientos por fechas |  | R.F.06. Presupuestos superados | R.F.08. Evolución del gasto de una categoría |  |
 
 ### 4.3. Requisitos no funcionales
