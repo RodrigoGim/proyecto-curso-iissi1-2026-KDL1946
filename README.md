@@ -420,8 +420,6 @@ Como cliente, quiero que una transferencia se haga entera o no se haga (si se re
 
 Objetivo: Comprobar que una transferencia se clasifica como interna y que cumple las condiciones de R.N.06.
 
-Elementos probados: RC-17, RC-18, RC-19, RC-21; R.N.06.
-
 Descripción: Ana, cliente, tiene dos cuentas en euros: “Cuenta nómina” (500 €) y “Hucha” (1000 €). Transfiere 200 € de la primera a la segunda. Tras la operación, los saldos son 300 € y 1200 €.
 
 Resultado: Válido. Origen y destino son distintas, tienen la misma moneda, el importe no supera el saldo, y como ambas son de Ana, /tipo = interna.
@@ -430,8 +428,6 @@ Resultado: Válido. Origen y destino son distintas, tienen la misma moneda, el i
 
 -Prueba 2: seguimiento de un presupuesto mensual
 Objetivo: comprobar que /gastoReal y /restante se calculan solo con los gastos de la categoría y del mes del presupuesto.
-
-Elementos probados: RC-13, RC-14, RC-22 a RC-29; R.N.05, R.N.09, R.N.10, R.N.11.
 
 Descripción: Luis, cliente, tiene la cuenta “Cuenta nómina” en euros con 1500 € de saldo inicial. Tiene un presupuesto de 1000 € para la categoría general “Alimentación” en marzo de 2026. Registra tres movimientos de tipo gasto en esa categoría:
 
@@ -457,8 +453,6 @@ El saldo de la cuenta queda en 1500 − 390 = 1110 €.
 
 Objetivo: comprobar que una transferencia entre cuentas de usuarios distintos se clasifica como externa.
 
-Elementos probados: RC-17, RC-18, RC-19, RC-20, RC-21; R.N.06.
-
 Descripción:
 
 Javier tiene una cuenta “Cuenta nómina” en euros con 350 €.
@@ -475,15 +469,13 @@ Resultado: válido. Después de la transferencia, Luis tiene 100 € y Luis 300 
 
 Objetivo: comprobar que el modelo no admite un movimiento cuyo tipo no coincide con el de su categoría.
 
-Elementos probados: RC-13; R.N.05.
-
 Descripción:
 
 Carlos tiene una cuenta “Cuenta nómina” en euros con 500 €.
 Existe la categoría general “Nómina”, de tipo ingreso.
 Carlos intenta registrar un gasto de 40 € en esa cuenta y lo clasifica en “Nómina”.
 
-Resultado: inválido. El movimiento es de tipo gasto y su categoría es de tipo ingreso, así que se viola RC-13. El movimiento se rechaza y el saldo de la cuenta no cambia (sigue en 500 €).
+Resultado: inválido. El movimiento es de tipo gasto y su categoría es de tipo ingreso, así que se viola R.N-05. El movimiento se rechaza y el saldo de la cuenta no cambia (sigue en 500 €).
 
 <img width="896" height="452" alt="image" src="https://github.com/user-attachments/assets/10ac6e04-3fa4-4e3d-b17a-88a1a2ad69e2" />
 
