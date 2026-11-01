@@ -412,11 +412,80 @@ Como cliente, quiero que una transferencia se haga entera o no se haga (si se re
 
 ### 5.1. Diagramas de clases UML
 
-- con restricciones.
+<img width="1168" height="867" alt="Ejemplo" src="https://github.com/user-attachments/assets/ef77309e-5555-4d0f-b7a3-ad0ddf37de65" />
 
 ### 5.2. Escenarios de prueba
 
-- con descripción textual y diagrama de objetos UML.
+-Prueba 1: Transferencia interna entre cuentas del mismo usuario.
+
+Objetivo: Comprobar que una transferencia se clasifica como interna y que cumple las condiciones de R.N.06.
+
+Elementos probados: RC-17, RC-18, RC-19, RC-21; R.N.06.
+
+Descripción: Ana, cliente, tiene dos cuentas en euros: “Cuenta nómina” (500 €) y “Hucha” (1000 €). Transfiere 200 € de la primera a la segunda. Tras la operación, los saldos son 300 € y 1200 €.
+
+Resultado: Válido. Origen y destino son distintas, tienen la misma moneda, el importe no supera el saldo, y como ambas son de Ana, /tipo = interna.
+
+<img width="903" height="648" alt="image" src="https://github.com/user-attachments/assets/e6d4d758-d1e2-4874-99d2-d8a4507bd1dc" />
+
+-Prueba 2: seguimiento de un presupuesto mensual
+Objetivo: comprobar que /gastoReal y /restante se calculan solo con los gastos de la categoría y del mes del presupuesto.
+
+Elementos probados: RC-13, RC-14, RC-22 a RC-29; R.N.05, R.N.09, R.N.10, R.N.11.
+
+Descripción: Luis, cliente, tiene la cuenta “Cuenta nómina” en euros con 1500 € de saldo inicial. Tiene un presupuesto de 1000 € para la categoría general “Alimentación” en marzo de 2026. Registra tres movimientos de tipo gasto en esa categoría:
+
+150 € el 5 de marzo.
+
+200 € el 18 de marzo.
+
+40 € el 2 de abril.
+
+Resultado: válido.
+
+El gasto de abril no cuenta, porque está fuera del mes del presupuesto.
+
+/gastoReal = 150 + 200 = 350 €.
+
+/restante = 1000 − 350 = 650 €.
+
+El saldo de la cuenta queda en 1500 − 390 = 1110 €.
+
+<img width="1031" height="576" alt="image" src="https://github.com/user-attachments/assets/c3ab0f9b-1c96-4653-9d24-2b6992e9ad40" />
+
+-Prueba 3: transferencia externa entre dos clientes
+
+Objetivo: comprobar que una transferencia entre cuentas de usuarios distintos se clasifica como externa.
+
+Elementos probados: RC-17, RC-18, RC-19, RC-20, RC-21; R.N.06.
+
+Descripción:
+
+Javier tiene una cuenta “Cuenta nómina” en euros con 350 €.
+
+Luis tiene una cuenta “Cuenta corriente” en euros con 50 €.
+
+Javier le transfiere 50 € a Luis.
+
+Resultado: válido. Después de la transferencia, Luis tiene 100 € y Luis 300 €.
+
+<img width="742" height="494" alt="image" src="https://github.com/user-attachments/assets/00c3c21f-37da-4ef9-a003-04a55346640c" />
+
+-Prueba 4: gasto con categoría de ingreso
+
+Objetivo: comprobar que el modelo no admite un movimiento cuyo tipo no coincide con el de su categoría.
+
+Elementos probados: RC-13; R.N.05.
+
+Descripción:
+
+Carlos tiene una cuenta “Cuenta nómina” en euros con 500 €.
+Existe la categoría general “Nómina”, de tipo ingreso.
+Carlos intenta registrar un gasto de 40 € en esa cuenta y lo clasifica en “Nómina”.
+
+Resultado: inválido. El movimiento es de tipo gasto y su categoría es de tipo ingreso, así que se viola RC-13. El movimiento se rechaza y el saldo de la cuenta no cambia (sigue en 500 €).
+
+<img width="896" height="452" alt="image" src="https://github.com/user-attachments/assets/10ac6e04-3fa4-4e3d-b17a-88a1a2ad69e2" />
 
 ## 6. Matrices de trazabilidad
 
