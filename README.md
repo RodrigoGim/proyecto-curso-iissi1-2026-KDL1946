@@ -412,7 +412,7 @@ Como cliente, quiero que una transferencia se haga entera o no se haga (si se re
 
 ### 5.1. Diagramas de clases UML
 
-<img width="1168" height="867" alt="Ejemplo" src="https://github.com/user-attachments/assets/ef77309e-5555-4d0f-b7a3-ad0ddf37de65" />
+<img width="1239" height="867" alt="Ejemplo" src="https://github.com/user-attachments/assets/dbc0df7b-d580-4ffa-a243-1d6f79696d3a" />
 
 ### 5.2. Escenarios de prueba
 
