@@ -457,11 +457,11 @@ Descripción:
 
 Luis tiene una cuenta “Cuenta nómina” en euros con 350 €.
 
-Javier tiene una cuenta “Cuenta corriente” en euros con 50 €.
+Javier tiene una cuenta “Cuenta corriente” en euros con 100 €.
 
 Luis le transfiere 50 € a Luis.
 
-Resultado: válido. Después de la transferencia, Luis tiene 100 € y Luis 300 €.
+Resultado: válido. Después de la transferencia, Javier tiene 150 € y Luis 300 €.
 
 <img width="742" height="494" alt="image" src="https://github.com/user-attachments/assets/00c3c21f-37da-4ef9-a003-04a55346640c" />
 
