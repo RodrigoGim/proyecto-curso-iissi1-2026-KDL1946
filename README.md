@@ -455,11 +455,11 @@ Objetivo: comprobar que una transferencia entre cuentas de usuarios distintos se
 
 Descripción:
 
-Javier tiene una cuenta “Cuenta nómina” en euros con 350 €.
+Luis tiene una cuenta “Cuenta nómina” en euros con 350 €.
 
-Luis tiene una cuenta “Cuenta corriente” en euros con 50 €.
+Javier tiene una cuenta “Cuenta corriente” en euros con 50 €.
 
-Javier le transfiere 50 € a Luis.
+Luis le transfiere 50 € a Luis.
 
 Resultado: válido. Después de la transferencia, Luis tiene 100 € y Luis 300 €.
 
