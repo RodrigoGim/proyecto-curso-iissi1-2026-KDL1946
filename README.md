@@ -412,7 +412,10 @@ Como cliente, quiero que una transferencia se haga entera o no se haga (si se re
 
 ### 5.1. Diagramas de clases UML
 
-<img width="1239" height="867" alt="Ejemplo" src="https://github.com/user-attachments/assets/dbc0df7b-d580-4ffa-a243-1d6f79696d3a" />
+<figure>
+  <img src="img/Ejemplo.jpg" alt="Diagrama de clases del modelo conceptual" width="700">
+  <figcaption>Diagrama de clases UML del modelo conceptual.</figcaption>
+</figure>
 
 ### 5.2. Escenarios de prueba
 
@@ -481,17 +484,76 @@ Resultado: inválido. El movimiento es de tipo gasto y su categoría es de tipo 
 
 ## 6. Matrices de trazabilidad
 
-- Matriz de trazabilidad entre los elementos del modelo conceptual y los requisitos.
+En R.F -> Marcar X en aquellas clases que esten relacionados con dichos requisitos
 
-|       | EntidadX   | AsociaciónX  | RestricciónX  | Entidad2 ...   | 
-|:------|:-----------|:-----------|:-----------|:-----------|
-| RI-1  | X          | X          | X          | X          |
-| RI-2  |            | X          |            | X          |
-| RF-1  |            | X          |            | X          |
-| RF-2  | X          |            | X          | X          |
-| RN-1  |            | X          |            |            |
-| RN-2  | X          | X          | X          |            |
-| ...   |            |            |            |            |
+En R.N -> Lo mismo que en R.N
+
+
+
+|          | Usuario | Cuenta | Categoría | Movimiento | Transferencia | Presupuesto | dueña | realiza | clasifica | crea | gestiona | presupuesta | origen | destino |
+|:---------|:-------:|:------:|:---------:|:----------:|:-------------:|:-----------:|:-----:|:-------:|:---------:|:----:|:--------:|:-----------:|:------:|:-------:|
+| R.I.01   |    X     |        |           |            |               |             |   X    |         |           |      |          |             |        |         |
+| R.I.02   |         |   X     |           |            |               |             |       |         |           |      |          |             |        |         |
+| R.I.03   |         |        |           |       X     |               |             |       |     X    |      X     |      |          |             |        |         |
+| R.I.04   |         |        |     X      |            |               |             |       |         |     X      |  X    |          |             |        |         |
+| R.I.05   |         |        |           |            |       X       |             |       |         |           |      |          |             |  X      |    X     |
+| R.I.06   |         |        |           |            |               |      X       |       |         |           |      |    X      |    X         |        |         |
+| R.F.01   |         |        |           |            |               |             |    X   |         |           |      |          |             |        |         |
+| R.F.02   |         |        |           |            |               |             |   X    |    X     |      X     |      |          |             |        |         |
+| R.F.03   |         |        |           |            |               |             |       |         |           |      |          |             |        |         |
+| R.F.04   |         |        |           |            |               |             |       |         |     X      |      |          |             |        |         |
+| R.F.05   |         |        |           |            |               |             |       |         |      X     |      |          |       X      |        |         |
+| R.F.06   |         |        |           |            |               |             |       |         |      X     |      |          |     X        |        |         |
+| R.F.07   |         |        |           |            |               |             |   X    |         |           |      |          |             |   X     |  X       |
+| R.F.08   |         |        |           |            |               |             |       |         |     X      |      |          |             |        |         |
+| R.F.09   |         |        |           |            |               |             |    X   |         |           |      |          |             |        |         |
+| R.N.01   |         |        |           |            |               |             |       |         |           |      |          |             |        |         |
+| R.N.02   |         |        |           |            |               |             |       |         |           |      |          |             |        |         |
+| R.N.03   |         |        |           |            |               |             |       |         |           |      |          |             |        |         |
+| R.N.04   |         |        |           |            |               |             |       |     X    |          |      |          |             |        |         |
+| R.N.05   |         |        |           |            |               |             |       |         |      X     |      |          |             |        |         |
+| R.N.06   |         |        |           |            |               |             |   X    |         |           |      |          |             |     X   |   X      |
+| R.N.07   |         |        |           |            |               |             |   X    |   X      |           |      |          |             |        |         |
+| R.N.08   |         |        |           |            |               |             |       |         |    X       |      |         |             |        |         |
+| R.N.09   |         |        |           |            |               |             |       |         |           |      |      X    |    X         |        |         |
+| R.N.10   |         |        |           |            |               |             |       |         |      X     |      |          |     X        |        |         |
+| R.N.11   |         |        |           |            |               |             |       |         |       X    |      |          |     X        |        |         |
+
+RESTRICCIONES:
+En R.I -> Restricciones que esten relacionados con algunos de las clases
+
+en R.F -> Restricciones que cumplan las reglas de negocio aplicadas a dichos requisitos funcionales
+
+En R.N -> Restricciones que cumplan con dichas reglas de negocio
+
+|          | RM-01 | RM-02 | RM-03 | RM-04 | RM-05 | RM-06 | RM-07 | RM-08 | RM-09 | RM-10 | RM-11 | RM-12 | RM-13 | RM-14 | RM-15 |
+|:---------|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+| R.I.01   |       |       |       |       |       |       |       |       |       |       |       |       |       |       |       |
+| R.I.02   |       |       |       |       |       |       |       |       |       |       |       |       |       |       |       |
+| R.I.03   |       |       |       |       |       |       |       |       |       |       |       |       |       |       |       |
+| R.I.04   |       |       |       |       |       |       |       |       |       |       |       |       |       |       |       |
+| R.I.05   |       |       |       |       |       |       |       |       |       |       |       |       |       |       |       |
+| R.I.06   |       |       |       |       |       |       |       |       |       |       |       |       |       |       |       |
+| R.F.01   |       |       |       |       |       |       |       |       |       |       |       |       |       |       |       |
+| R.F.02   |       |       |       |       |       |       |       |       |       |       |       |       |       |       |       |
+| R.F.03   |       |       |       |       |       |       |       |       |       |       |       |       |       |       |       |
+| R.F.04   |       |       |       |       |       |       |       |       |       |       |       |       |       |       |       |
+| R.F.05   |       |       |       |       |       |       |       |       |       |       |       |       |       |       |       |
+| R.F.06   |       |       |       |       |       |       |       |       |       |       |       |       |       |       |       |
+| R.F.07   |       |       |       |       |       |       |       |       |       |       |       |       |       |       |       |
+| R.F.08   |       |       |       |       |       |       |       |       |       |       |       |       |       |       |       |
+| R.F.09   |       |       |       |       |       |       |       |       |       |       |       |       |       |       |       |
+| R.N.01   |       |       |       |       |       |       |       |       |       |       |       |       |       |       |       |
+| R.N.02   |       |       |       |       |       |       |       |       |       |       |       |       |       |       |       |
+| R.N.03   |       |       |       |       |       |       |       |       |       |       |       |       |       |       |       |
+| R.N.04   |       |       |       |       |       |       |       |       |       |       |       |       |       |       |       |
+| R.N.05   |       |       |       |       |       |       |       |       |       |       |       |       |       |       |       |
+| R.N.06   |       |       |       |       |       |       |       |       |       |       |       |       |       |       |       |
+| R.N.07   |       |       |       |       |       |       |       |       |       |       |       |       |       |       |       |
+| R.N.08   |       |       |       |       |       |       |       |       |       |       |       |       |       |       |       |
+| R.N.09   |       |       |       |       |       |       |       |       |       |       |       |       |       |       |       |
+| R.N.10   |       |       |       |       |       |       |       |       |       |       |       |       |       |       |       |
+| R.N.11   |       |       |       |       |       |       |       |       |       |       |       |       |       |       |       |
 
 -- fin entregable 2 --
 
