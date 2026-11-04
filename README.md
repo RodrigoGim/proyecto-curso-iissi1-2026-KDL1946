@@ -450,7 +450,7 @@ El gasto de abril no cuenta, porque está fuera del mes del presupuesto.
 
 El saldo de la cuenta queda en 1500 − 390 = 1110 €.
 
-<img width="1031" height="576" alt="image" src="https://github.com/user-attachments/assets/c3ab0f9b-1c96-4653-9d24-2b6992e9ad40" />
+<img width="1046" height="635" alt="image" src="https://github.com/user-attachments/assets/5ca608a2-2071-4b00-abc7-d0a1879c31b3" />
 
 -Prueba 3: transferencia externa entre dos clientes
 
@@ -466,7 +466,7 @@ Luis le transfiere 50 € a Javier.
 
 Resultado: válido. Después de la transferencia, Javier tiene 150 € y Luis 300 €.
 
-<img width="742" height="494" alt="image" src="https://github.com/user-attachments/assets/00c3c21f-37da-4ef9-a003-04a55346640c" />
+<img width="757" height="576" alt="image" src="https://github.com/user-attachments/assets/bb830e7a-60b6-4bde-983f-4270085e45a5" />
 
 -Prueba 4: gasto con categoría de ingreso
 
@@ -480,7 +480,7 @@ Carlos intenta registrar un gasto de 40 € en esa cuenta y lo clasifica en “N
 
 Resultado: inválido. El movimiento es de tipo gasto y su categoría es de tipo ingreso, así que se viola RM-06 (regla de negocio R.N.05). El movimiento se rechaza y el saldo de la cuenta no cambia (sigue en 500 €).
 
-<img width="896" height="452" alt="image" src="https://github.com/user-attachments/assets/10ac6e04-3fa4-4e3d-b17a-88a1a2ad69e2" />
+<img width="890" height="448" alt="image" src="https://github.com/user-attachments/assets/1893be7f-8c4a-4711-9f61-615fa1765c08" />
 
 ## 6. Matrices de trazabilidad
 
