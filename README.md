@@ -484,10 +484,6 @@ Resultado: inválido. El movimiento es de tipo gasto y su categoría es de tipo 
 
 ## 6. Matrices de trazabilidad
 
-En R.F -> Marcar X en aquellas clases que esten relacionados con dichos requisitos
-
-En R.N -> Lo mismo que en R.N
-
 |          | Usuario | Cuenta | Categoría | Movimiento | Transferencia | Presupuesto | dueña | realiza | clasifica | crea | gestiona | presupuesta | origen | destino |
 |:---------|:-------:|:------:|:---------:|:----------:|:-------------:|:-----------:|:-----:|:-------:|:---------:|:----:|:--------:|:-----------:|:------:|:-------:|
 | R.I.01   |    X    |        |           |            |               |             |       |         |           |      |          |             |        |         |
@@ -518,11 +514,6 @@ En R.N -> Lo mismo que en R.N
 | R.N.11   |    X    |   X    |     X     |     X      |       X       |      X      |   X   |    X    |     X     |      |    X     |      X      |        |         |
 
 RESTRICCIONES:
-En R.I -> Restricciones que esten relacionados con algunos de las clases
-
-en R.F -> Restricciones que cumplan las reglas de negocio aplicadas a dichos requisitos funcionales
-
-En R.N -> Restricciones que cumplan con dichas reglas de negocio
 
 |          | RM-01 | RM-02 | RM-03 | RM-04 | RM-05 | RM-06 | RM-07 | RM-08 | RM-09 | RM-10 | RM-11 | RM-12 | RM-13 | RM-14 | RM-15 |
 |:---------|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
